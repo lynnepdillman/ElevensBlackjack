@@ -4,17 +4,17 @@ public class BlackJackCard extends Card
   	//constructors
   	public BlackJackCard( String s, int f)
   	{
-            super(s, f);    // this is calling Card constructor
+            super(s, f);
   	}
 
   	//accessors
 	public int getValue()
 	{
-            if( getFace() == 1 )    // BlackJack rules, A
+            if( getFace() == 1 )
 		return 11;
-            if( getFace() >= 10 )   // 10, J, Q, K
+            if( getFace() >= 10 )
 		return 10;
-            return getFace();       // 2 - 9
+            return getFace();
 	}
 
   	//toString
