@@ -1,4 +1,6 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+package ElevensBlackjack;
+
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
