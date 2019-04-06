@@ -1,4 +1,6 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+package BlackJack;
+
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -20,31 +22,29 @@ public class Deck
 
 	public Deck ()
 	{
-		//initialize data - stackOfCards - topCardIndex
-		
-		
-		//loop through suits
-			//loop through faces
-				//add in a new card
-		
+		stackOfCards = new ArrayList<Card>();
+		for (int f = 0; f < 13; f++)
+			for (String suitString : SUITS)
+				stackOfCards.add(new BlackJackCard(f, suitString));
+                
+                topCardIndex = 51;
 	}
 
 	//modifiers
-   public void shuffle ()
+        public void shuffle ()
 	{
-		//shuffle the deck
-		//reset variables as needed
+		Collections.shuffle(stackOfCards); 
 	}
 
-   //accessors
+        //accessors
 	public int  size ()
 	{
-		return 0;
+		return stackOfCards.size();
 	}
 
 	public int numCardsLeft()
 	{
-		return 0;
+		return topCardIndex;
 	}
 
 	public Card nextCard()
@@ -55,5 +55,5 @@ public class Deck
 	public String toString()
 	{
 		return stackOfCards + "   topCardIndex = " + topCardIndex;
-	} 
+	}
 }
