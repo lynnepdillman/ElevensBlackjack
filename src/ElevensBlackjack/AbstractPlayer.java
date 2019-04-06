@@ -1,4 +1,4 @@
-package ElevensBlackjack;
+package BlackJack;
 
 //� A+ Computer Science  -  www.apluscompsci.com
 //Name -
@@ -15,41 +15,39 @@ public abstract class AbstractPlayer implements Playerable
    private int winCount;
 
    //constructors
+   public AbstractPlayer()
+   {
+       hand = new ArrayList<Card>();
+   }
 
    public  void addCardToHand( Card temp )
    {
-
-
+       hand.add(temp);
    }
 
    public  void resetHand( )
    {
-
+       hand.clear();
 
    }
 
    public  void setWinCount( int numwins )
    {
-
-
+       winCount = numwins;
    }
 
-   public int getWinCount() { return 0; }
+   public int getWinCount() { return winCount; }
 
-   public int getHandSize() { return 0; }
+   public int getHandSize() { return hand.size(); }
 
    public int getHandValue()
    {
-		//great example of polymorphism
-      int total=0;
-
-
-
-
-
-
-
-      return total;
+        int sum = 0;
+        
+        for(Card i : hand)
+             sum += i.getValue();
+        
+        return sum;
    }
 
    public String toString()
