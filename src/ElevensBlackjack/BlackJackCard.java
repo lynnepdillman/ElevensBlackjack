@@ -1,4 +1,6 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+package BlackJack;
+
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -6,17 +8,30 @@
 
 public class BlackJackCard extends Card
 {
-  	//constructors
+  	public BlackJackCard()
+        {
+            super(1, "DIAMONDS");
+        }
 
+        public BlackJackCard(int f, String s)
+        {
+            super(f, s);
+        }
 
+  	//accessors
+	public int getValue()
+	{
+            if( getFace() == 1 )
+                    return 11;
+            if( getFace() >= 10 )
+                    return 10;
+            return getFace();
+	}
 
-  	public int getValue()
-  	{
-  		//enables you to build the value for the game into the card
-  		//this makes writing the whole program a little easier
-
-
-		return 0;
-  	}
+        //toString
+        public String toString()
+        {
+          return super.toString() + " " + getValue();
+        }
   	
  }
