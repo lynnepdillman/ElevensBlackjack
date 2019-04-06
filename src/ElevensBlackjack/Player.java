@@ -1,4 +1,6 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+package BlackJack;
+
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -10,15 +12,17 @@ import java.util.Scanner;
 
 
 //define Player class here 
+public class Player extends AbstractPlayer
+{
+    //constructors
+    public Player()
+    {
+        super();
+    }
 
-
-
-
-	//constructors
-
-
-
-
-
-	//hit method goes here
-
+    //hit method goes here
+    public boolean hit()
+    {
+        return false;
+    }
+}
