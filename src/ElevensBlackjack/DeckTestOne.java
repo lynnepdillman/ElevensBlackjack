@@ -1,4 +1,6 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+package BlackJack;
+
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -12,7 +14,7 @@ public class DeckTestOne
 	public static void main( String args[] )
 	{
 		Deck deck = new Deck();	
-		for( int i=0; i<Deck.NUMCARDS; i++ ) {
+		for( int i=0; i<Deck.NUMCARDS; i++ ){
 		  out.println(deck.nextCard());
 		}
 		
